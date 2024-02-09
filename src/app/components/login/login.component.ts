@@ -7,6 +7,9 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder } from '@angular/forms';
 import { Console } from 'node:console';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 @Component({
@@ -20,6 +23,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     CommonModule,
     FormsModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
+    SharedModule,
 
   ],
   templateUrl: './login.component.html',
@@ -27,7 +32,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  isUnchanged = true;
+  loading = false;
 
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {
     this.form = this.fb.group({
@@ -46,11 +51,13 @@ export class LoginComponent implements OnInit {
     const usuario = this.form.value.usuario;
     const password = this.form.value.password;
 
-    if(usuario == 'jperez' && password == 'admin123') {
+    if(usuario == 'admin' && password == 'admin123') {
       // Redireccionamos al dashboard
+      this.fakeLoading();
     } else {
       // Mostramos un mensaje de error;
       this.error();
+      this.form.reset();
     }
 
   }
@@ -59,7 +66,14 @@ export class LoginComponent implements OnInit {
       duration: 5000,
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
-    } )
-
+    })
   }
-}
+   fakeLoading() {
+    this.loading = true;
+    setTimeout(() => {
+      //Redireccionamos al dashboard
+      this.loading = true;
+    }, 1500);
+   }
+  }
+
