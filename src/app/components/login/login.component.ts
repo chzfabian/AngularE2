@@ -9,6 +9,7 @@ import { Console } from 'node:console';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from '../shared/shared.module';
+import { Router } from '@angular/router';
 
 
 
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   loading = false;
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
     this.form = this.fb.group({
       usuario: ['', Validators.required],
       password: ['', Validators.required],
@@ -68,11 +69,10 @@ export class LoginComponent implements OnInit {
       verticalPosition: 'bottom'
     })
   }
-   fakeLoading() {
+    fakeLoading() {
     this.loading = true;
     setTimeout(() => {
-      //Redireccionamos al dashboard
-      this.loading = true;
+      this.router.navigate(['dashboard']);
     }, 1500);
    }
   }

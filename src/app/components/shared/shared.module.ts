@@ -12,6 +12,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppComponent } from '../../app.component';
 import { LoginComponent } from '../login/login.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -28,7 +29,7 @@ import { LoginComponent } from '../login/login.component';
     MatButtonModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-
+    MatToolbarModule,
 
 
   ],
