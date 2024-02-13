@@ -13,7 +13,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppComponent } from '../../app.component';
 import { LoginComponent } from '../login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,7 +31,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
-
+    MatIconModule,
+    HttpClientModule,
 
   ],
   exports: [
@@ -41,6 +43,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatButtonModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatIconModule,
+    HttpClientModule,
   ]
 })
 export class SharedModule { }
