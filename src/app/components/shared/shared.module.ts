@@ -48,6 +48,7 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
+    MatTableModule,
   ]
   ,
   providers: [MenuService,]
