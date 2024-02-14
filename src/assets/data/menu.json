@@ -12,6 +12,6 @@
   {
     "nombre": "Reportes",
     "redirect": "/dashboard/reportes"
-  },
+  }
 
 ]

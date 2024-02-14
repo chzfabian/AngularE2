@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 /* Modulos */
 import { ReactiveFormsModule, } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Angular Material */
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -14,8 +15,8 @@ import { AppComponent } from '../../app.component';
 import { LoginComponent } from '../login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
-
+import { MenuService } from '../../services/menu.service';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
+    MatTableModule,
 
   ],
   exports: [
@@ -47,5 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     HttpClientModule,
   ]
+  ,
+  providers: [MenuService,]
 })
 export class SharedModule { }

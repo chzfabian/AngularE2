@@ -9,6 +9,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -27,7 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatToolbarModule,
     RouterOutlet,
     NavbarComponent,
-
+    HttpClientModule,
 
   ]
 })

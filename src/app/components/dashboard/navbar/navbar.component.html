@@ -1,18 +1,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <mat-toolbar color="primary">
-  <span>AppUsers</span>
+  <span>Academia VIVO</span>
 
 
   <span class="example-spacer"></span>
-  <button mat-button [routerLink]="['/dashboard']" >Dashboard</button>
-  <button mat-button [routerLink]="['/dashboard/registro']" >Registro</button>
-  <button mat-button [routerLink]="['/dashboard/reportes']" >Reportes</button>
-  <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <button mat-button [routerLink]="['/dashboard/']" > Dashboard</button>
+<button mat-button [routerLink]="['/dashboard/registro']" >Registro</button>
+<button mat-button [routerLink]="['/dashboard/reportes']" >Reportes</button>
+<span class="example-spacer"></span>
+<button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <span class="material-symbols-outlined" >
       logout
       </span>
 </button>
 
-  <span class="example-spacer"></span>
 </mat-toolbar>
+
+
+<router-outlet></router-outlet>

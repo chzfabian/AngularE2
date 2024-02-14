@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 
 /* Componentes */
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

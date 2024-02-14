@@ -16,12 +16,11 @@ import { RegistroComponent } from './registro/registro.component';
 const routes: Routes = [
 { path: '', component: DashboardComponent, children: [{
   path: 'usuarios', component: UsuariosComponent },
-{ path: 'reportes', component: ReportesComponent },
-{ path: 'registro', component: RegistroComponent },
 { path: 'inicio',   component: InicioComponent },
-
 ] },
 
+{ path: 'reportes', component: ReportesComponent },
+{ path: 'registro', component: RegistroComponent },
 ];
 
 @NgModule({
