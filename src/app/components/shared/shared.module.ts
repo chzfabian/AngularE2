@@ -17,7 +17,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { MenuService } from '../../services/menu.service';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatTableModule} from '@angular/material/table';
     MatIconModule,
     HttpClientModule,
     MatTableModule,
-
+    MatTooltipModule,
+    MatPaginatorModule,
   ],
   exports: [
     ReactiveFormsModule,
@@ -49,6 +51,9 @@ import {MatTableModule} from '@angular/material/table';
     MatIconModule,
     HttpClientModule,
     MatTableModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+
   ]
   ,
   providers: [MenuService,]
