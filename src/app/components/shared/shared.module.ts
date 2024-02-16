@@ -19,6 +19,8 @@ import { MenuService } from '../../services/menu.service';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatTableModule,
     MatTooltipModule,
     MatPaginatorModule,
+    MatSortModule,
   ],
   exports: [
     ReactiveFormsModule,
@@ -53,6 +56,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatTableModule,
     MatTooltipModule,
     MatPaginatorModule,
+    MatSortModule,
 
   ]
   ,
