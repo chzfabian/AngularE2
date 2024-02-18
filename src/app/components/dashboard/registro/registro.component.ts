@@ -6,6 +6,8 @@ import {MatTableModule} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { UsuarioService } from '../../../services/usuario.service';
+import { CommonModule } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -16,6 +18,7 @@ import { UsuarioService } from '../../../services/usuario.service';
   imports: [
     SharedModule,
     MatTableModule,
+    CommonModule,
   ],
 
   templateUrl: './registro.component.html',
@@ -34,7 +37,7 @@ export class RegistroComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _usuarioService: UsuarioService) { }
+  constructor(private _usuarioService: UsuarioService,  private _snackBar: MatSnackBar,) { }
 
   ngOnInit(): void {
     this.cargarUsuarios();
@@ -57,7 +60,19 @@ export class RegistroComponent {
   }
 
 
-  eliminarUsuario() {
+  eliminarUsuario(index: number) {
+    console.log(index);
+
+    this._usuarioService.eliminarUsuario(index);
+    this.cargarUsuarios();
+
+
+    this._snackBar.open('El usuario fue eliminado con exito', '', {
+      duration: 1500,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom'
+    })
+
 
   }
 

@@ -21,6 +21,7 @@ const routes: Routes = [
 
 { path: 'reportes', component: ReportesComponent },
 { path: 'registro', component: RegistroComponent },
+{ path: 'crear-usuario', component: RegistroComponent },
 ];
 
 @NgModule({
