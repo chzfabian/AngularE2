@@ -8,6 +8,7 @@ import { MatSort } from '@angular/material/sort';
 import { UsuarioService } from '../../../services/usuario.service';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     SharedModule,
     MatTableModule,
     CommonModule,
+    RegistroComponent,
+    RouterModule,
   ],
 
   templateUrl: './registro.component.html',
