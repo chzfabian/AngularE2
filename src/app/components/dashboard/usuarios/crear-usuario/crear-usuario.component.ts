@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { RegistroComponent } from '../../registro/registro.component';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 
 @Component({
-  selector: 'app-crear-usuario',
+  selector: 'crear-usuario-component',
   standalone: true,
   imports: [
 
@@ -20,13 +21,26 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatGridListModule,
   ],
   templateUrl: './crear-usuario.component.html',
-  styleUrl: './crear-usuario.component.css'
+  styleUrl: './crear-usuario.component.css',
+
 })
-export class CrearUsuarioComponent, GridListDynamicExample {
-/*   tiles: any[] = [
+
+
+
+export class CrearUsuarioComponent implements OnInit {
+
+
+  tiles: any[] = [
     {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
     {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
     {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ]; */
+  ];
+
+  constructor () { }
+
+  ngOnInit(): void {
+
+  }
+
 }
