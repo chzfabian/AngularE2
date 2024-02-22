@@ -5,6 +5,8 @@ import { RegistroComponent } from '../../registro/registro.component';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -19,9 +21,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatTableModule,
     CommonModule,
     MatGridListModule,
+    MatSelectModule,
   ],
   templateUrl: './crear-usuario.component.html',
-  styleUrl: './crear-usuario.component.css',
+/*   styleUrl: './crear-usuario.component.css', */
 
 })
 
@@ -29,12 +32,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 export class CrearUsuarioComponent implements OnInit {
 
-
-  tiles: any[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  sexo: any[] = [
+    {value: 'Masculino', viewValue: 'Masculino'},
+    {value: 'Femenino', viewValue: 'Femenino'},
   ];
 
   constructor () { }

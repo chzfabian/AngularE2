@@ -18,3 +18,11 @@
   display: flex;
   justify-content: center;
 }
+
+.mat-grid--title {
+  grid-row: span 2; /* Adjust as needed */
+}
+
+.ancho {
+    width: 80%;
+}
