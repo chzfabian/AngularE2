@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from '../../../../interfaces/usuario';
 
 
 
@@ -36,11 +38,35 @@ export class CrearUsuarioComponent implements OnInit {
     {value: 'Masculino', viewValue: 'Masculino'},
     {value: 'Femenino', viewValue: 'Femenino'},
   ];
+  form: FormGroup;
 
-  constructor () { }
+
+
+  constructor (private fb: FormBuilder) {
+
+    this.form = this.fb.group({
+    usuario: ['', Validators.required],
+    nombre: ['', Validators.required],
+    apellido: ['', Validators.required],
+    sexo: ['', Validators.required],
+
+    })
+  }
 
   ngOnInit(): void {
+ }
 
-  }
+   agregarUsuario() {
+      console.log(this.form);
+
+      const user: any = {
+        usuario: this.form.value.usuario,
+        nombre: this.form.value.nombre,
+        apellido: this.form.value.apellido,
+        sexo: this.form.value.sexo,
+      }
+
+      console.log(user);
+    }
 
 }
