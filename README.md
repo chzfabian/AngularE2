@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 <h1>Pasos:</h1>
 <h2>1. <strong>Para el ingreso del proyecto</strong> <h2>
-<img src="../AngularE2/src/assets/img/login.png" width: 40%; height: 40% />
+<img src="./src/assets/img/login.png" width: 40%; height: 40% />
 <h5>Acceder con el Usuario: admin y Contraseña: admin123. ✔️</h5>
 
 <h2>2. <strong>Acceder a la sección Registro </strong> </h2>
