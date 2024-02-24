@@ -75,8 +75,6 @@ export class RegistroComponent {
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
     })
-
-
   }
 
 

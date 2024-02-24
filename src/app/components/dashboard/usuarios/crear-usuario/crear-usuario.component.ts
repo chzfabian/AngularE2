@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router, Route } from '@angular/router';
 import { RegistroComponent } from '../../registro/registro.component';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
@@ -8,6 +8,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from '../../../../interfaces/usuario';
+import { UsuarioService } from '../../../../services/usuario.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -42,9 +44,12 @@ export class CrearUsuarioComponent implements OnInit {
 
 
 
-  constructor (private fb: FormBuilder) {
-
+  constructor (private fb: FormBuilder,
+    private UsuarioService: UsuarioService,
+    private router: Router,
+    private _snackBar: MatSnackBar ) {
     this.form = this.fb.group({
+
     usuario: ['', Validators.required],
     nombre: ['', Validators.required],
     apellido: ['', Validators.required],
@@ -57,7 +62,6 @@ export class CrearUsuarioComponent implements OnInit {
  }
 
    agregarUsuario() {
-      console.log(this.form);
 
       const user: any = {
         usuario: this.form.value.usuario,
@@ -66,7 +70,14 @@ export class CrearUsuarioComponent implements OnInit {
         sexo: this.form.value.sexo,
       }
 
-      console.log(user);
+      this.UsuarioService.agregarUsuario(user);
+      this.router.navigate(['/dashboard/registro'])
+
+      this._snackBar.open('El usuario fue agregado con exito!', '', {
+        duration: 1500,
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom'
+      })
     }
 
 }
