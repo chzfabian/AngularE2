@@ -32,7 +32,7 @@ export class RegistroComponent {
   listUsuarios: Usuario[] = [];
 
 
-  displayedColumns: string[] = ['usuario', 'nombre', 'apellido', 'sexo', 'acciones',];
+  displayedColumns: string[] = ['usuario', 'nombre', 'apellido', 'sexo', 'rol', 'acciones',];
   dataSource!: MatTableDataSource<any>;
 
 
@@ -75,6 +75,7 @@ export class RegistroComponent {
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
     })
+
   }
 
 

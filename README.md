@@ -6,22 +6,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<h1>Pasos:</h1>
+<h2>1. <strong>Para el ingreso del proyecto</strong> <h2>
+<img src="../AngularE2/src/assets/img/login.png" width: 40%; height: 40% />
+<h5>Acceder con el Usuario: admin y Contraseña: admin123. ✔️</h5>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h2>2. <strong>Acceder a la sección Registro </strong> </h2>
+<img src="../AngularE2/src/assets/img/registro.png" width: 40%; height: 40% />
+<h5>En esta seccion ubicar y crear en la tabla el registro de personal de la academia. 🎓📜</h5>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<h2>3. <strong>Ya ubicado en la seccion de Crear Usuario. Completar el formulario.</strong></h2>
+<img src="../AngularE2/src/assets/img/crearusuario.png" width: 40%; height: 40% />
+<h4>Una vez completado puede ir a la seccion de Registro. si quiere modificar o eliminar el registro
+realizado, puede hacerlo en las opciones señaladas.</h4>
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h5>Ya finalizado el registro espero pueda disfrutar este CRUD, realizado para la entrega 2 de 
+la academia coderhouse. 🎓📜📚 </h5>

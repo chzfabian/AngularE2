@@ -40,6 +40,21 @@ export class CrearUsuarioComponent implements OnInit {
     {value: 'Masculino', viewValue: 'Masculino'},
     {value: 'Femenino', viewValue: 'Femenino'},
   ];
+
+  rol: any[] = [
+    {value: 'Director', viewValue: 'Director'},
+    {value: 'Alumno', viewValue: 'Alumno'},
+    {value: 'Profesor', viewValue: 'Profesor'},
+    {value: 'Tutor', viewValue: 'Tutor'},
+    {value: 'Secretaria', viewValue: 'Secretaria'},
+    {value: '', viewValue: 'Alumno'},
+
+
+
+
+  ];
+
+
   form: FormGroup;
 
 
@@ -54,6 +69,7 @@ export class CrearUsuarioComponent implements OnInit {
     nombre: ['', Validators.required],
     apellido: ['', Validators.required],
     sexo: ['', Validators.required],
+    rol: ['', Validators.required],
 
     })
   }
@@ -68,6 +84,7 @@ export class CrearUsuarioComponent implements OnInit {
         nombre: this.form.value.nombre,
         apellido: this.form.value.apellido,
         sexo: this.form.value.sexo,
+        rol: this.form.value.rol,
       }
 
       this.UsuarioService.agregarUsuario(user);

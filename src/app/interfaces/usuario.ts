@@ -3,5 +3,6 @@ export interface Usuario {
   nombre: string,
   apellido: string,
   sexo: string,
+  rol: string,
 
 }

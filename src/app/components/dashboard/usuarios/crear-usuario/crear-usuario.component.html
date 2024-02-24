@@ -44,6 +44,17 @@
         </mat-grid-tile>
 
         <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-form-field>
+            <mat-label>Rol</mat-label>
+            <mat-select formControlName="rol">
+              @for (rol of rol; track rol) {
+                <mat-option [value]="rol.value">{{rol.viewValue}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
           <button mat-raised-button style="margin-right: 20px;">Volver</button>
           <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Aceptar</button>
         </mat-grid-tile>
