@@ -8,16 +8,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 <h1>Pasos:</h1>
 <h2>1. <strong>Para el ingreso del proyecto</strong> <h2>
-<img src="../AngularE2/src/assets/img/login.png" width: 40%; height: 40% />
+<img src="./src/assets/img/login.png" width: 40%; height: 40% />
 <h5>Acceder con el Usuario: admin y Contraseña: admin123. ✔️</h5>
 
 <h2>2. <strong>Acceder a la sección Registro </strong> </h2>
-<img src="../AngularE2/src/assets/img/registro.png" width: 40%; height: 40% />
+<img src="./src/assets/img/registro.png" width: 40%; height: 40% />
 <h5>En esta seccion ubicar y crear en la tabla el registro de personal de la academia. 🎓📜</h5>
 
 
 <h2>3. <strong>Ya ubicado en la seccion de Crear Usuario. Completar el formulario.</strong></h2>
-<img src="../AngularE2/src/assets/img/crearusuario.png" width: 40%; height: 40% />
+<img src="./src/assets/img/crearusuario.png" width: 40%; height: 40% />
 <h4>Una vez completado puede ir a la seccion de Registro. si quiere modificar o eliminar el registro
 realizado, puede hacerlo en las opciones señaladas.</h4>
 
