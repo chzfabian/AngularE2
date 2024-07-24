@@ -7,7 +7,11 @@ import { Usuario } from '../interfaces/usuario';
 export class UsuarioService {
 
   listUsuarios: Usuario[] = [
-    {usuario: "admin", nombre: 'Fabian', apellido: "Mendoza", sexo: 'Masculino', rol: 'admin'},
+    {usuario: "admin", nombre: 'Fabian', apellido: "Mendoza", sexo: 'Masculino', rol: 'Director'},
+    {usuario: "Pau22", nombre: 'Paolo', apellido: "Guerrero", sexo: 'Masculino', rol: 'Tutor'},
+    {usuario: "mariab90", nombre: 'Maria', apellido: "Blanco", sexo: 'Femenino', rol: 'Secretaria'},
+    {usuario: "torinox", nombre: 'Matheu', apellido: "Bilardi", sexo: 'Masculino', rol: 'Alumno'},
+
   ];
 
 
