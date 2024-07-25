@@ -21,6 +21,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 <h4>Una vez completado puede ir a la seccion de Registro. si quiere modificar o eliminar el registro
 realizado, puede hacerlo en las opciones señaladas.</h4>
 
+<h2>4. <strong>Ya ubicado en la seccion de Reportes.</strong></h2>
+<img src="./src/assets/img/reportes.png" width: 40%; height: 40% />
+<h4>Analizar los promedios de ingreso de estudiantes a la academia.</h4>
 
 <h2>4. <strong>Ya ubicado en la seccion de Reportes.</strong></h2>
 <img src="./src/assets/img/reportes.png" width: 40%; height: 40% />
