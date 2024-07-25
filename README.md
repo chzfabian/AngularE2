@@ -25,9 +25,5 @@ realizado, puede hacerlo en las opciones señaladas.</h4>
 <img src="./src/assets/img/reportes.png" width: 40%; height: 40% />
 <h4>Analizar los promedios de ingreso de estudiantes a la academia.</h4>
 
-<h2>4. <strong>Ya ubicado en la seccion de Reportes.</strong></h2>
-<img src="./src/assets/img/reportes.png" width: 40%; height: 40% />
-<h4>Analizar los promedios de ingreso de estudiantes a la academia.</h4>
-
 <h5>Ya finalizado el registro espero pueda disfrutar este CRUD, realizado para la entrega 2 de 
 la academia coderhouse. 🎓📜📚 </h5>
