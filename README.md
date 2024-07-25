@@ -12,7 +12,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 <h5>Acceder con el Usuario: admin y Contraseña: admin123. ✔️</h5>
 
 <h2>2. <strong>Acceder a la sección Registro </strong> </h2>
-<img src="./src/assets/img/registro.png" width: 40%; height: 40% />
+<img src="./src/assets/img/registrouno.png" width: 40%; height: 40% />
 <h5>En esta seccion ubicar y crear en la tabla el registro de personal de la academia. 🎓📜</h5>
 
 
@@ -22,6 +22,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 realizado, puede hacerlo en las opciones señaladas.</h4>
 
 
+<h2>4. <strong>Ya ubicado en la seccion de Reportes.</strong></h2>
+<img src="./src/assets/img/reportes.png" width: 40%; height: 40% />
+<h4>Analizar los promedios de ingreso de estudiantes a la academia.</h4>
 
 <h5>Ya finalizado el registro espero pueda disfrutar este CRUD, realizado para la entrega 2 de 
 la academia coderhouse. 🎓📜📚 </h5>
