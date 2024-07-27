@@ -47,7 +47,6 @@ export class CrearUsuarioComponent implements OnInit {
     {value: 'Profesor', viewValue: 'Profesor'},
     {value: 'Tutor', viewValue: 'Tutor'},
     {value: 'Secretaria', viewValue: 'Secretaria'},
-    {value: '', viewValue: 'Alumno'},
 
 
 

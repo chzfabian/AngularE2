@@ -8,6 +8,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import Swal from 'sweetalert2';
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+
 
 
 @Component({
@@ -40,5 +43,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
       this._menuService.getMenu().subscribe(data => {
         this.menu = data;
       })    }
+
 
 }

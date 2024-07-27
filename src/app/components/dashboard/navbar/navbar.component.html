@@ -20,27 +20,33 @@
 <router-outlet></router-outlet>
  -->
  <mat-drawer-container class="example-container" [hasBackdrop]="" >
+  <button mat-raised-button (click)="drawer.toggle()" style="  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);;
+  "><span class="material-symbols-outlined">
+        last_page
+        </span></button>
    <mat-drawer [opened]="true" #drawer class="example-sidenav" mode="side" >
     <div class="logoz">
       <img src="./assets/img/logo.png" width="40%" height="50%">
     </div>
     <h1>
-      <strong style="justify-content: center; display: flex; margin-top: 20px;"> Academia Armonía </strong>
+      <strong style="justify-content: center; display: flex; margin-top: 15px;"> Academia Armonía </strong>
     </h1>
 
       <span class="example-spacer"></span>
       <div class="button-container">
         <button mat-button [routerLink]="['/dashboard/']" > Inicio</button>
       <button mat-button [routerLink]="['/dashboard/registro']" >Registro</button>
+      <button mat-button [routerLink]="['/dashboard/alumnos']" >Alumnos</button>
+      <button mat-button [routerLink]="['/dashboard/']" >Productos*</button>
       <button mat-button [routerLink]="['/dashboard/reportes']" >Reportes</button>
 
-            <img src="./assets/img/banner.png" style="margin-top: 80%;">
+            <img src="./assets/img/banner.png" style="margin-top: 70%;">
     </div>
 
 <span class="example-spacer"></span>
 </mat-drawer>
       <div class="buttoncito">
-    <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" matTooltip="Logout">
       <span class="material-symbols-outlined" >
         logout
         </span>
@@ -68,10 +74,7 @@
         <mat-option [value]="false">Alumno Malo</mat-option>
       </mat-select>
     </mat-form-field> -->
-    <button mat-raised-button (click)="drawer.toggle()" style="  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);;
-"><span class="material-symbols-outlined">
-      last_page
-      </span></button>
+
 
 <!--   </mat-drawer-content> -->
 </mat-drawer-container>

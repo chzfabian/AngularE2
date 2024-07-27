@@ -1,3 +1,4 @@
+
 <div class="container">
   <mat-toolbar>
     <span>Registro</span>
@@ -47,17 +48,34 @@
       <ng-container matColumnDef="acciones">
         <th mat-header-cell *matHeaderCellDef> </th>
         <td mat-cell *matCellDef="let element; let i = index" style="text-align: right;">
-          <a class="pointer" style="color: #1878b0"  matTooltip="Ver Usuario">
-            <mat-icon>search</mat-icon>
-          </a>
 
-          <a class="pointer" style="color: #1f516f"  matTooltip="Editar Usuario">
-            <mat-icon>edit</mat-icon>
-          </a>
 
-          <a class="pointer" (click)="eliminarUsuario(i)" style="color: #d44123" matTooltip="Eliminar Usuario">
-            <mat-icon>delete</mat-icon>
-          </a>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+
+          <mat-menu #menu="matMenu">
+
+            <button mat-menu-item>
+              <a class="pointer" style="color: #000000"  >
+                <mat-icon>search</mat-icon> Ver Usuario
+              </a>
+            </button> <!-- matTooltip="Ver Usuario" Esto me servira en un futuro.. -->
+
+            <button mat-menu-item>
+              <a class="pointer" style="color: #000000" >
+                <mat-icon>edit</mat-icon> Editar Usuario
+              </a>
+            </button> <!--  matTooltip="Editar Usuario" -->
+
+            <button mat-menu-item>
+              <a class="pointer" (click)="eliminarUsuario(i)" style="color: #8b1c06" >
+               <mat-icon>delete</mat-icon>  Eliminar Usuario
+              </a>
+            </button> <!-- matTooltip="Eliminar Usuario" -->
+          </mat-menu>
+
+
         </td>
       </ng-container>
 

@@ -9,7 +9,7 @@ import { UsuarioService } from '../../../services/usuario.service';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
-
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -22,6 +22,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RegistroComponent,
     RouterModule,
+    MatMenuModule,
   ],
 
   templateUrl: './registro.component.html',
