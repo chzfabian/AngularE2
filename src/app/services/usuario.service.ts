@@ -27,5 +27,13 @@ export class UsuarioService {
 
   agregarUsuario(usuario: Usuario) {
     this.listUsuarios.unshift(usuario);
+    if(usuario.nombre.length >= 10){
+      alert("El nombre del usuario no puede tener mas de 10 caracteres");
+    }else if (usuario.usuario.length >= 10){
+      alert("El usuario no puede tener mas de 10 caracteres");
+    }else if (usuario.apellido.length >= 15){
+      alert ("El usuario no puede tener mas de 10 caracteres")
+    }
+    }
   }
-}
+
