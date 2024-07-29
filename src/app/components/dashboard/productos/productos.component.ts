@@ -1,33 +1,22 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
-import Swal from 'sweetalert2';
-
-
 @Component({
   selector: 'app-productos',
   standalone: true,
   imports: [
-    Swal,
     MatGridListModule,
+    NgFor,
   ],
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.css'
 })
 export class ProductosComponent {
-  alert(){
-    Swal.fire({
-      title: "Realmente quieres salir?",
-      showDenyButton: true,|
-      showCancelButton: true,
-      confirmButtonText: "Si quiero salir",
-      denyButtonText: `No quiero salir`
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        Swal.fire("Guardado!", "", "success");
-      } else if (result.isDenied) {
-        Swal.fire("No quiero ", "", "info");
-      }
-    });
-  }
+  products=[
+    {"name":"Curso de Angular", "imgSrc": "./assets/img/angular1.png", "summary":"Angular"},
+    {"name":"Curso de Javascript", "imgSrc": "./assets/img/javascript1.png", "summary":"Javascript"},
+    {"name":"Curso de MongoDB", "imgSrc": "./assets/img/mongodb1.png", "summary":"MongoDB"},
+    {"name":"Curso de Node.js", "imgSrc": "./assets/img/node1.png", "summary":"Node.js"},
+    {"name":"Curso de Php", "imgSrc": "./assets/img/php.png", "summary":"Php"},
+    {"name":"Curso de MySql", "imgSrc": "./assets/img/mysql.png", "summary":"MySql"},    ]
 }

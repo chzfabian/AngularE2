@@ -10,24 +10,48 @@ import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
-import { RegistroComponent } from '../registro/registro.component';
+
+
 
 
 @Component({
   selector: 'app-alumnos',
+  templateUrl: './alumnos.component.html',
   standalone: true,
   imports: [
     SharedModule,
     MatTableModule,
     CommonModule,
-    RegistroComponent,
     RouterModule,
     MatMenuModule,
+    MatPaginator,
   ],
 
-  templateUrl: './alumnos.component.html',
-  styleUrl: './alumnos.component.css'
 })
-export class AlumnosComponent {
 
+
+export class AlumnosComponent {
+  displayedColumns: string[] = ['position', 'name', 'apellido', 'symbol'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator: MatPaginator | null = null;
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
+
+export interface PeriodicElement {
+  name: string;
+  apellido: string;
+  position: number;
+  symbol: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {position: 1, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
+  {position: 2, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
+  {position: 3, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
+  {position: 4, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
+  {position: 6, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
+];
+
