@@ -11,7 +11,10 @@ export class UsuarioService {
     {usuario: "Pau22", nombre: 'Paolo', apellido: "Guerrero", sexo: 'Masculino', rol: 'Tutor'},
     {usuario: "mariab90", nombre: 'Maria', apellido: "Blanco", sexo: 'Femenino', rol: 'Secretaria'},
     {usuario: "torinox", nombre: 'Matheu', apellido: "Bilardi", sexo: 'Masculino', rol: 'Alumno'},
-
+    {usuario: "coco32", nombre: 'Camilo', apellido: "Cosseti", sexo: 'Masculino', rol: 'Alumno'},
+    {usuario: "demilau", nombre: 'Lautara', apellido: "Demichelis", sexo: 'Femenina', rol: 'Alumno'},
+    {usuario: "jperez", nombre: 'Jhon', apellido: "Bustamente", sexo: 'Masculino', rol: 'Alumno'},
+    {usuario: "jmamani", nombre: 'Jorge', apellido: "Mamani", sexo: 'Masculino', rol: 'Alumno'},
   ];
 
 

@@ -12,8 +12,6 @@ import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 
 
-
-
 @Component({
   selector: 'app-alumnos',
   templateUrl: './alumnos.component.html',
@@ -24,34 +22,61 @@ import {MatMenuModule} from '@angular/material/menu';
     CommonModule,
     RouterModule,
     MatMenuModule,
-    MatPaginator,
+    AlumnosComponent,
   ],
 
+
 })
-
-
 export class AlumnosComponent {
-  displayedColumns: string[] = ['position', 'name', 'apellido', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator | null = null;
+  listUsuarioss: Usuario[] = [];
+
+
+  displayedColumns: string[] = ['usuario', 'nombre', 'apellido', 'sexo', 'rol', 'acciones',];
+  dataSource!: MatTableDataSource<any>;
+
+
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(private _usuarioService: UsuarioService,  private _snackBar: MatSnackBar,) { }
+
+  ngOnInit(): void {
+    this.cargarUsuarios();
+  }
+
+  cargarUsuarios() {
+    this.listUsuarioss = this._usuarioService.getUsuarios();
+    this.dataSource = new MatTableDataSource(this.listUsuarioss)
+  }
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
+
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+
+  eliminarUsuario(index: number) {
+    console.log(index);
+
+    this._usuarioService.eliminarUsuario(index);
+    this.cargarUsuarios();
+
+
+    this._snackBar.open('El usuario fue eliminado con exito', '', {
+      duration: 1500,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom'
+    })
+
+  }
+
+
 }
-
-export interface PeriodicElement {
-  name: string;
-  apellido: string;
-  position: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
-  {position: 2, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
-  {position: 3, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
-  {position: 4, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
-  {position: 6, name: 'Carlos', apellido: 'Hernandez', symbol: 'Alumno'},
-];
-
